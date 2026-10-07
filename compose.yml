@@ -13,7 +13,7 @@ services:
   application:
     image: vasanthche/webapp:database
     ports:
-      - "1111:8080"
+      - "1112:8080"
     deploy:
       replicas: 3
     depends_on:
