@@ -2,16 +2,14 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: vasanthche/webapp:java
-    ports:
-      - "3306:3306"
+    image: vasanthche/webapp:database
     deploy:
       replicas: 1
     networks:
       - mynetwork
 
   application:
-    image: vasanthche/webapp:database
+    image: vasanthche/webapp:java
     ports:
       - "1112:8080"
     deploy:
