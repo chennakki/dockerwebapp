@@ -7,6 +7,8 @@ services:
       - "3306:3306"
     deploy:  
       replicas: 1
+    volumes:
+      - dbdata:/var/lib/mysql
     networks:
       - mynetwork
 
@@ -21,6 +23,9 @@ services:
     networks:
       - mynetwork
 
+volumes:
+  dbdata:
+  
 networks:
   mynetwork:
     driver: overlay
